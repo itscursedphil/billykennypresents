@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" href="img/icon.png" sizes="192x192">
 
   </head>
-  <body>
+  <body class="font-copy">
     <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -139,6 +139,16 @@
               </ul>
             </li>
           </ul>
+        </div>
+        <div id="request">
+          <h3>Request your city</h3>
+          <form>
+            <div class="request-city-wrapper">
+              <label for="request-city">City:</label>
+              <input type="text" id="request-city" name="city" placeholder="Your city" class="font-copy"/>
+            </div>
+            <button type="submit" class="font-copy btn">Submit</button>
+          </form>
         </div>
       </div>
     </main>
