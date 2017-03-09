@@ -142,13 +142,22 @@
         </div>
         <div id="request">
           <h3>Request your city</h3>
-          <form>
+          <p>
+            Submit your city and subscribe to the newsletter for a chance to catch Billy playing in your town!
+          </p>
+          <form novalidate>
+            <div class="request-email-wrapper">
+              <label for="request-email">Email:</label>
+              <input type="email" id="request-email" name="email" placeholder="Your email" class="font-copy" required/>
+            </div>
             <div class="request-city-wrapper">
               <label for="request-city">City:</label>
-              <input type="text" id="request-city" name="city" placeholder="Your city" class="font-copy"/>
+              <input type="text" id="request-city" name="city" placeholder="Your city" class="font-copy" required/>
             </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10c40b173ef744bc6d5fe9c9e_6bb39a870a" tabindex="-1" value=""></div>
             <button type="submit" class="font-copy btn">Submit</button>
           </form>
+          <div id="request-response"></div>
         </div>
       </div>
     </main>
@@ -172,7 +181,7 @@
         <a href="http://www.billykennymusic.com" target="_blank" title="Billy Kenny's official website" class="btn">Visit website</a>
       </div>
     </footer>
-    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/main.min.js"></script>
     <!-- <script>
