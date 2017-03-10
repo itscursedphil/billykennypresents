@@ -21,22 +21,22 @@
     $('#request form').on('submit', function(e){
       e.preventDefault();
 
-      response.slideUp().text('');
+      response.slideUp().html('');
 
       var email = $('#request-email').val().toString();
       var city = $('#request-city').val().toString();
 
       if(!email.length){
-        response.text('Please enter a valid email address').slideDown();
+        response.html('Please enter a valid email address').slideDown();
         return;
       }
 
       if(!city.length){
-        response.text('Please enter your city').slideDown();
+        response.html('Please enter your city').slideDown();
         return;
       }
 
-      $.ajax('//billykennymusic.us15.list-manage.com/subscribe/post-json?u=10c40b173ef744bc6d5fe9c9e&amp;id=6bb39a870a&c=?', {
+      $.ajax('//billykennymusic.us15.list-manage.com/subscribe/post-json?u=10c40b173ef744bc6d5fe9c9e&id=6bb39a870a&c=?', {
         method: 'GET',
         dataType: 'jsonp',
         data: {
@@ -45,10 +45,10 @@
         },
         success: function(data){
           $('#request form')[0].reset();
-          response.text('Yay, see you soon! :)').slideDown();
+          response.html('Yay, see you soon! &#x270C;').slideDown();
         },
         error: function(err){
-          response.text('There was an error submitting the form :(').slideDown();
+          response.html('There was an error submitting the form! &#x1F622;').slideDown();
         }
       });
     })
